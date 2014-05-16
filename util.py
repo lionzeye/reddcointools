@@ -21,10 +21,10 @@ def determine_db_dir():
   import os.path
   import platform
   if platform.system() == "Darwin":
-    return os.path.expanduser("~/Library/Application Support/Bitcoin/")
+    return os.path.expanduser("~/Library/Application Support/Reddcoin/")
   elif platform.system() == "Windows":
-    return os.path.join(os.environ['APPDATA'], "Bitcoin")
-  return os.path.expanduser("~/.bitcoin")
+    return os.path.join(os.environ['APPDATA'], "Reddcoin")
+  return os.path.expanduser("~/.reddcoin")
 
 def create_env(db_dir=None):
   if db_dir is None:
