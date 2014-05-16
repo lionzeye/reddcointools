@@ -23,7 +23,7 @@ Print out  wallet keys and transactions:
   dbdump.py --wallet --wallet-tx
 
 Print out the "genesis block" (the very first block in the proof-of-work block chain):
-  dbdump.py --block=000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f
+  dbdump.py --block=9f1f5a21034ef45bf096da7a1ede1d9cc2f6d2e80013781969fc01d8acdcb0e2
 
 Print out one of the transactions from my wallet:
   dbdump.py --transaction=c6e1bf883bceef0aa05113e189982055d9ba7212ddfc879798616a0d0828c98c
