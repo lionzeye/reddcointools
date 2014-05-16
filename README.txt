@@ -25,9 +25,9 @@ Print out  wallet keys and transactions:
 Print out the "genesis block" (the very first block in the proof-of-work block chain):
   dbdump.py --block=9f1f5a21034ef45bf096da7a1ede1d9cc2f6d2e80013781969fc01d8acdcb0e2
 
-Print out one of the transactions from my wallet:
-  dbdump.py --transaction=c6e1bf883bceef0aa05113e189982055d9ba7212ddfc879798616a0d0828c98c
-  dbdump.py --transaction=c6e1...c98c
+Print out one of the biggest transactions:
+  dbdump.py --transaction=fdbc649fd408241b7da8363aafe3815542344f53408652c885ef33a6cd3d5ff8
+  dbdump.py --transaction=fdbc...5ff8
 
 Print out all 'received' transactions that aren't yet spent:
   dbdump.py --wallet-tx-filter='fromMe:False.*spent:False'
