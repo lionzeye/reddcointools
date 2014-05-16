@@ -1,27 +1,21 @@
 NOTE:
 
 These tools are becoming obsolete as we move away from using Berkeley DB in
-Bitcoin-Qt/bitcoind.
+Reddcoin-Qt/reddcoind.
 
 If you are looking for a tool to manipulate the wallet.dat file, you might
 want to try https://github.com/jackjack-jj/pywallet
 
 REQUIREMENTS:
 
-You must run Bitcoin-Qt/bitcoind versions 0.6.0 through 0.7.* with the "-detachdb" option
+You must run Reddcoin-Qt/reddcoind with the "-detachdb" option
 or these tools will be unable to read the Berkeley DB files.
-
-Now that the bitcoin blockchain is more than 2GB big, some of these tools will no longer
-run on 32-bit systems!
-
-Running on a 32-bit system will result in a 'Cannot allocate memory' error when the tools
-try to mmap the second blk000?.dat file.
 
 ----- dbdump.py -----
 Run    dbdump.py --help    for usage.  Database files are opened read-only, but
-you might want to backup your Bitcoin wallet.dat file just in case.
+you might want to backup your Reddcoin wallet.dat file just in case.
 
-You must quit Bitcoin before reading the transactions, blocks, or address database files.
+You must quit Reddcoin before reading the transactions, blocks, or address database files.
 
 Examples:
 
@@ -38,8 +32,8 @@ Print out one of the transactions from my wallet:
 Print out all 'received' transactions that aren't yet spent:
   dbdump.py --wallet-tx-filter='fromMe:False.*spent:False'
 
-Print out all blocks involving transactions to the Bitcoin Faucet:
-  dbdump.py --search-blocks=15VjRaDX9zpbA8LVnbrCAFzrVzN7ixHNsC
+Print out all blocks involving transactions to the authors Reddcoin-address:
+  dbdump.py --search-blocks=RctBPR4vuQmgDuqABUnrqCWjEDwaqF2FWd
 
 There's a special search term to look for non-standard transactions:
   dbdump.py --search-blocks=NONSTANDARD_CSCRIPTS
@@ -54,5 +48,5 @@ Only half-baked because to be really useful I'd have to write serialize routines
 
 ----- jsonToCSV.py -----
 Read JSON list-of-objects from standard input, writes CSV file to standard output.
-Useful for converting bitcoind's listtransactions output to CSV that can be
+Useful for converting reddcoind's listtransactions output to CSV that can be
 imported into a spreadsheet.
