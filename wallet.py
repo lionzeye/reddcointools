@@ -22,7 +22,7 @@ def open_wallet(db_env, writable=False):
     r = True
 
   if r is not None:
-    logging.error("Couldn't open wallet.dat/main. Try quitting Bitcoin and running this again.")
+    logging.error("Couldn't open wallet.dat/main. Try quitting Reddcoin and running this again.")
     sys.exit(1)
   
   return db
@@ -321,7 +321,7 @@ def rewrite_wallet(db_env, destFileName, pre_put_callback=None):
 def trim_wallet(db_env, destFileName, pre_put_callback=None):
   """Write out ONLY address book public/private keys
      THIS WILL NOT WRITE OUT 'change' KEYS-- you should
-     send all of your bitcoins to one of your public addresses
+     send all of your reddcoins to one of your public addresses
      before calling this.
   """
   db = open_wallet(db_env)
